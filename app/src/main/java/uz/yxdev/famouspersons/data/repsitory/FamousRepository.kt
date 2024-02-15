@@ -18,7 +18,7 @@ class FamousRepository(private val context: Context) {
         loadList()
     }
 
-    private fun loadList() {
+    fun loadList() {
         addPerson(
             FamousPersonData(
                 id = ls.size,

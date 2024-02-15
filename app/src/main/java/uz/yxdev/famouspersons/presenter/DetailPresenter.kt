@@ -7,16 +7,21 @@ import uz.yxdev.famouspersons.screen.MainScreen
 
 class DetailPresenter(
     private val view: DetailScreen,
-    private val repository: FamousRepository,
-    private val mainClick: MainScreen
+    private val repository: FamousRepository
 ) {
-    init {
 
+
+    fun loadUi(index: Int) {
+        val data = repository.getFamousById(index)
+        view.loadUiFamous(data)
     }
-    fun loadUi(){
 
+    fun clickableBack() {
+        view.clickBack()
     }
-
+    fun openScreen(){
+        view.openTestScreen()
+    }
 
 
 }
