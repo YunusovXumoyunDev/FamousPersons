@@ -17,7 +17,6 @@ class DetailScreen : Fragment(R.layout.screen_details) {
     private val binding: ScreenDetailsBinding get() = _binding!!
     private lateinit var repository: FamousRepository
     private lateinit var presenter: DetailPresenter
-    private var index: Int = 0
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         _binding = ScreenDetailsBinding.bind(view)
         repository = FamousRepository(requireContext())
