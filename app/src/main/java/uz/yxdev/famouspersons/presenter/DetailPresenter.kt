@@ -19,7 +19,7 @@ class DetailPresenter(
     fun clickableBack() {
         view.clickBack()
     }
-    fun openScreen(){
+    fun openQuizScreen(){
         view.openTestScreen()
     }
 

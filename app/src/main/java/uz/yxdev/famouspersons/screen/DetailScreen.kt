@@ -4,7 +4,9 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import android.widget.Toast
+import androidx.core.os.bundleOf
 import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.commit
 import uz.yxdev.famouspersons.R
 import uz.yxdev.famouspersons.data.model.FamousPersonData
 import uz.yxdev.famouspersons.data.repsitory.FamousRepository
@@ -42,14 +44,21 @@ class DetailScreen : Fragment(R.layout.screen_details) {
             presenter.clickableBack()
         }
         binding.startTest.setOnClickListener {
-            presenter.openScreen()
+            presenter.openQuizScreen()
         }
     }
     fun clickBack(){
         parentFragmentManager.popBackStack()
     }
     fun openTestScreen(){
-        Toast.makeText(context, "tez kunda", Toast.LENGTH_SHORT).show()
+        parentFragmentManager.commit {
+            replace(
+                R.id.fragment_container,
+                QuizScreen(),
+                "Quiz Screen"
+            )
+            addToBackStack(null)
+        }
     }
 
     override fun onDestroyView() {
