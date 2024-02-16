@@ -20,14 +20,7 @@ class QuizScreen : Fragment(R.layout.screen_quiz) {
         loadUiClickable()
     }
     fun clickBack(){
-        parentFragmentManager.commit {
-            replace(
-                R.id.fragment_container,
-                DetailScreen(),
-                "Details Screen"
-            )
-            addToBackStack(null)
-        }
+        parentFragmentManager.popBackStack()
     }
     private fun loadUiClickable(){
         binding.backScreen.setOnClickListener {
