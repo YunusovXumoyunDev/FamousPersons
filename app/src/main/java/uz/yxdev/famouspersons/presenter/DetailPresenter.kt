@@ -13,7 +13,9 @@ class DetailPresenter(
 
     fun loadUi(index: Int) {
         val data = repository.getFamousById(index)
-        view.loadUiFamous(data)
+        if (data != null) {
+            view.loadUiFamous(data)
+        }
     }
 
     fun clickableBack() {
