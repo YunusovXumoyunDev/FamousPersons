@@ -35,7 +35,7 @@ class DetailScreen : Fragment(R.layout.screen_details) {
     }
 
     private fun initialize() {
-        val famousId = requireArguments().getInt("id")
+        val famousId = requireArguments().getInt("id", 0)
         presenter.loadUi(famousId)
     }
 
@@ -55,7 +55,7 @@ class DetailScreen : Fragment(R.layout.screen_details) {
             replace(
                 R.id.fragment_container,
                 QuizScreen::class.java,
-                bundleOf("id" to id),
+                bundleOf("famousID" to id),
                 "Quiz Screen"
             )
             addToBackStack(null)

@@ -10,11 +10,8 @@ class FamousRepository(private val context: Context) {
         return ls
     }
 
-    fun getFamousById(id: Int): FamousPersonData? {
-        val data = ls.find { item ->
-            item.id == id
-        }
-        return data
+    fun getFamousById(id: Int): FamousPersonData {
+        return ls[id]
     }
 
     init {
@@ -54,7 +51,6 @@ class FamousRepository(private val context: Context) {
                 description = context.getString(R.string.behbudiy)
             )
         )
-        ls.shuffle()
     }
 
     private fun addPerson(data: FamousPersonData) {

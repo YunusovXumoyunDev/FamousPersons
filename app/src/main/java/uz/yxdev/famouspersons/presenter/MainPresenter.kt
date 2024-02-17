@@ -21,27 +21,18 @@ class MainPresenter(
     }
 
     fun clickFirstItem() {
-        val data= repository.getFamousById(0)
-        if (data!=null){
-            view.openDetailScreen(data)
-        }
+        view.openDetailScreen(repository.getFamousById(0))
     }
 
     fun clickSecondItem() {
-        val data= repository.getFamousById(1)
-        if (data!=null){
-            view.openDetailScreen(data)
-        }    }
+        view.openDetailScreen(repository.getFamousById(1))
+    }
 
     fun clickThirdItem() {
-        val data= repository.getFamousById(2)
-        if (data!=null){
-            view.openDetailScreen(data)
-        }    }
+        view.openDetailScreen(repository.getFamousById(2))
+    }
 
     fun clickFourthItem() {
-        val data= repository.getFamousById(3)
-        if (data!=null){
-            view.openDetailScreen(data)
-        }    }
+        view.openDetailScreen(repository.getFamousById(3))
+    }
 }

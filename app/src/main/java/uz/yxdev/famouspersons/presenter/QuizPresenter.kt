@@ -16,6 +16,10 @@ class QuizPresenter(
     }
 
     private fun loadUi() {
-        val ls=repository
+        val ls=repository.getList(view.getFamousID())
+        view.setQuestion(ls[0])
+        view.setQuestion(ls[1])
+        view.setQuestion(ls[2])
+        view.setQuestion(ls[3])
     }
 }
