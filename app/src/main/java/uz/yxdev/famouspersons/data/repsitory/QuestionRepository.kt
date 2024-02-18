@@ -14,8 +14,8 @@ class QuestionRepository(private val context: Context) {
     private fun loadList() {
         addQuestion(
             QuestionData(
-                id = questions.size,
-                famousID = questions.size,
+                id = 0,
+                famousID = 0,
                 questionText = context.getString(R.string.alisher_question_1),
                 variantA = "1441-yilda Hirotda",
                 variantB = "1440-yilda Samarqandda",
@@ -26,8 +26,8 @@ class QuestionRepository(private val context: Context) {
         )
         addQuestion(
             QuestionData(
-                id = questions.size,
-                famousID = questions.size,
+                id = 1,
+                famousID = 0,
                 questionText = context.getString(R.string.alisher_question_2),
                 variantA = "Lutfiy",
                 variantB = "Buxoriy",
@@ -38,9 +38,9 @@ class QuestionRepository(private val context: Context) {
         )
         addQuestion(
             QuestionData(
-                id = questions.size,
-                famousID = questions.size,
-                questionText = context.getString(R.string.alisher_question_2),
+                id = 2,
+                famousID = 0,
+                questionText = context.getString(R.string.alisher_question_3),
                 variantA = "10-12 yoshlaridan",
                 variantB = "8 yoshidan",
                 variantC = "16 yoshidan",

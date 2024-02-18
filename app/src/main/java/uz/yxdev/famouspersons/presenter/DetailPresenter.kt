@@ -9,18 +9,21 @@ class DetailPresenter(
     private val view: DetailScreen,
     private val repository: FamousRepository
 ) {
-
+    private var famousID = -1
 
     fun loadUi(index: Int) {
+        famousID = index
         val data = repository.getFamousById(index)
-        view.loadUiFamous(data)
+        if (data != null)
+            view.loadUiFamous(data)
     }
 
     fun clickableBack() {
         view.clickBack()
     }
-    fun openQuizScreen(){
-        view.openTestScreen()
+
+    fun openQuizScreen() {
+        view.openTestScreen(famousID)
     }
 
 

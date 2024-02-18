@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:width="3500dp"
+    android:height="2400dp"
+    android:tint="@color/white"
+    android:tintMode="screen"
+    android:viewportWidth="3500"
+    android:viewportHeight="2400"
+    tools:ignore="VectorRaster" />

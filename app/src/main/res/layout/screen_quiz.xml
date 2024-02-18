@@ -1,114 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tolls="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tolls="http://schemas.android.com/tools"
+    android:background="@drawable/bg"
     android:orientation="vertical">
 
-    <LinearLayout
+    <FrameLayout
         android:id="@+id/appBar_ly"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:padding="16dp">
+        android:layout_height="84dp"
+        android:background="@drawable/bg"
+        android:orientation="horizontal">
 
         <androidx.appcompat.widget.AppCompatImageButton
             android:id="@+id/back_screen"
             android:layout_width="44dp"
             android:layout_height="44dp"
-
             android:layout_gravity="center_vertical"
+            android:layout_margin="16dp"
             android:background="@drawable/bg_circular"
             android:elevation="4dp"
             android:src="@drawable/ic_back" />
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
-            android:layout_marginStart="16dp"
+            android:layout_marginStart="86dp"
             android:fontFamily="@font/aldrich"
             android:text="Savollar"
+            android:textColor="@color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
-    </LinearLayout>
 
-    <LinearLayout
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/appbar_bg" />
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="350dp"
         android:layout_below="@id/appBar_ly"
         android:layout_marginHorizontal="30dp"
+        android:layout_marginTop="26dp"
         android:orientation="vertical">
-
-        <Space
+        <ImageView
             android:layout_width="match_parent"
-            android:layout_height="16dp" />
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/quiz_background" />
 
-        <TextView
-            android:id="@+id/quiz_text"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="26sp"
-            android:textStyle="bold"
-            tolls:text="Alisher Navoiy qachon va qayerda tavallud topgan?" />
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-        <RadioGroup
-            android:id="@+id/radio_gr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:paddingStart="10dp">
-
-            <RadioButton
-                android:id="@+id/first_answer"
+            <TextView
+                android:id="@+id/quiz_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="23sp"
-                tolls:text="First answer" />
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="26dp"
+                android:textColor="@color/black"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                tolls:text="Alisher Navoiy qachon va qayerda tavallud topgan?" />
 
-            <RadioButton
-                android:id="@+id/second_answer"
+            <RadioGroup
+                android:id="@+id/radio_gr"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="23sp"
-                tolls:text="Second answer" />
+                android:paddingStart="26dp">
 
-            <RadioButton
-                android:id="@+id/third_answer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="23sp"
-                tolls:text="Third answer" />
+                <RadioButton
+                    android:id="@+id/first_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    tolls:text="First answer" />
 
-            <RadioButton
-                android:id="@+id/fourth_answer"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="23sp"
-                tolls:text="Fourth answer" />
-        </RadioGroup>
-    </LinearLayout>
+                <RadioButton
+                    android:id="@+id/second_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    tolls:text="Second answer" />
 
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/quiz_back_btn"
-        android:layout_margin="25dp"
+                <RadioButton
+                    android:id="@+id/third_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    tolls:text="Third answer" />
+
+                <RadioButton
+                    android:id="@+id/fourth_answer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:textSize="23sp"
+                    tolls:text="Fourth answer" />
+            </RadioGroup>
+        </LinearLayout>
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="64dp"
         android:layout_height="64dp"
+        android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_gravity="center_vertical"
-        android:background="@drawable/bg_circular_2"
-        android:elevation="4dp"
-        android:src="@drawable/ic_back" />
-    <androidx.appcompat.widget.AppCompatImageButton
-        android:id="@+id/quiz_next_btn"
-        android:layout_margin="25dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="25dp"
+        android:foregroundGravity="center"
+        android:rotation="180">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/quiz_back_btn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_circular_2"
+            android:elevation="4dp" />
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:src="@drawable/next_icon" />
+    </FrameLayout>
+
+    <FrameLayout
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_gravity="center_vertical"
-        android:background="@drawable/bg_circular_3"
-        android:elevation="4dp"
-        android:rotation="180"
-        android:src="@drawable/ic_back" />
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="25dp"
+        android:layout_marginBottom="25dp">
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/quiz_next_btn"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/bg_circular_3"
+            android:elevation="4dp"
+            android:rotation="180" />
+
+        <ImageView
+            android:id="@+id/quiz_next_image"
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:elevation="4dp"
+            android:src="@drawable/next_icon" />
+    </FrameLayout>
 </RelativeLayout>

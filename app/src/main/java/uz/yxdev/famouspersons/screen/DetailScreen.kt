@@ -47,10 +47,12 @@ class DetailScreen : Fragment(R.layout.screen_details) {
             presenter.openQuizScreen()
         }
     }
-    fun clickBack(){
+
+    fun clickBack() {
         parentFragmentManager.popBackStack()
     }
-    fun openTestScreen(){
+
+    fun openTestScreen(id: Int) {
         parentFragmentManager.commit {
             replace(
                 R.id.fragment_container,
